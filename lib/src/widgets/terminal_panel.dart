@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../models/terminal_theme.dart';
-import '../utils/box_drawing.dart';
 import 'terminal_text.dart';
 
 class TerminalPanel extends StatelessWidget {

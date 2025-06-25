@@ -4,7 +4,6 @@ import '../models/terminal_theme.dart';
 import '../models/terminal_buffer.dart';
 import '../models/terminal_command.dart';
 import '../utils/keyboard_handler.dart';
-import '../utils/color_utils.dart';
 import 'terminal_text.dart';
 
 typedef TerminalCommandCallback = void Function(TerminalCommand command);

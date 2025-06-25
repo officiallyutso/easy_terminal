@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../models/terminal_theme.dart';
-import '../utils/box_drawing.dart';
 import 'terminal_text.dart';
 
 typedef TerminalListCallback<T> = void Function(T item, int index);

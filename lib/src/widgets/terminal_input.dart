@@ -55,7 +55,6 @@ class _TerminalInputState extends State<TerminalInput>
   late FocusNode _focusNode;
   
   bool _cursorVisible = true;
-  int _cursorPosition = 0;
   List<String> _filteredSuggestions = [];
   int _selectedSuggestionIndex = -1;
   bool _showSuggestions = false;
@@ -66,7 +65,6 @@ class _TerminalInputState extends State<TerminalInput>
     
     _controller = TextEditingController(text: widget.initialValue);
     _focusNode = FocusNode();
-    _cursorPosition = widget.initialValue.length;
     
     _keyboardHandler = TerminalKeyboardHandler(
       onTextInput: _handleTextInput,
@@ -110,7 +108,6 @@ class _TerminalInputState extends State<TerminalInput>
 
   void _onTextChanged() {
     final text = _controller.text;
-    _cursorPosition = _controller.selection.baseOffset;
     
     widget.onChanged?.call(text);
     
@@ -149,7 +146,6 @@ class _TerminalInputState extends State<TerminalInput>
     // This is handled by the TextEditingController
     // Just update cursor position tracking
     setState(() {
-      _cursorPosition = _controller.selection.baseOffset;
     });
   }
 
@@ -197,7 +193,6 @@ class _TerminalInputState extends State<TerminalInput>
     // Clear input after submission
     _controller.clear();
     setState(() {
-      _cursorPosition = 0;
       _showSuggestions = false;
       _selectedSuggestionIndex = -1;
     });
@@ -211,14 +206,12 @@ class _TerminalInputState extends State<TerminalInput>
     setState(() {
       _showSuggestions = false;
       _selectedSuggestionIndex = -1;
-      _cursorPosition = suggestion.length;
     });
   }
 
   void clear() {
     _controller.clear();
     setState(() {
-      _cursorPosition = 0;
       _showSuggestions = false;
       _selectedSuggestionIndex = -1;
     });
@@ -230,7 +223,6 @@ class _TerminalInputState extends State<TerminalInput>
       TextPosition(offset: text.length),
     );
     setState(() {
-      _cursorPosition = text.length;
     });
   }
 
