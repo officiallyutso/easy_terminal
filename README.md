@@ -33,22 +33,22 @@ These screenshots demonstrate the practical implementation of the package featur
 <table>
 <tr>
 <td align="center">
-<img src="https://github.com/user-attachments/assets/8d0be077-7d89-488d-abfa-5dd6c7d341c3" alt="Main application interface" width="400"/>
+<img src="assets/1.png" alt="Main application interface" width="400"/>
 <br>
 <em>Main application interface showing the primary features and layout</em>
 </td>
 <td align="center">
-<img src="https://github.com/user-attachments/assets/6fac4ef6-6b98-4b28-957d-bd8615ff36e9" alt="Feature demonstration screen" width="400"/>
+<img src="assets/2.png" alt="Feature demonstration screen" width="400"/>
 <br>
 <em>Demonstration of key package functionality in action</em>
 </td>
 <td align="center">
-<img src="https://github.com/user-attachments/assets/4cf8422d-2db1-4cdc-91fa-55be34ba0ca7" alt="Additional feature showcase" width="400"/>
+<img src="assets/3.png" alt="Additional feature showcase" width="400"/>
 <br>
 <em>Additional feature showcase highlighting package capabilities</em>
 </td>
   <td align="center">
-<img src="https://github.com/user-attachments/assets/6ecbc8bf-577d-4cce-b85c-dd89d5f909089" alt="Configuration or settings interface" width="400"/>
+<img src="assets/4.png" alt="Configuration or settings interface" width="400"/>
 <br>
 <em>Configuration interface demonstrating package customization options</em>
 </td>
