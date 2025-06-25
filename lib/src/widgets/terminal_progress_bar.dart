@@ -20,7 +20,7 @@ class TerminalProgressBar extends StatelessWidget {
     this.width = 40,
     this.showPercentage = true,
     this.fillChar = BoxDrawing.fullBlock,
-    this.emptyChar = BoxDrawing.lightShade,
+    this.emptyChar = BoxDrawing.lightShade, required Color color,
   }) : super(key: key);
 
   @override
