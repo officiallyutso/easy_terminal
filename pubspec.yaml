@@ -1,5 +1,6 @@
 name: easy_terminal
-description: "A new Flutter package project."
+description: "A fully customizable terminal-style UI toolkit for Flutter with themes, input, panels, list selectors, progress bars, and command parsing."
+
 version: 0.0.1
 repository: https://github.com/officiallyutso/easy_terminal
 
