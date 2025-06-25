@@ -30,52 +30,16 @@ class TerminalDemoPage extends StatefulWidget {
 }
 
 class _TerminalDemoPageState extends State<TerminalDemoPage> {
-  final GlobalKey<_TerminalViewState> _terminalKey = GlobalKey();
+  final GlobalKey<TerminalViewState> _terminalKey = GlobalKey();
   late TerminalTheme _currentTheme;
   int _selectedThemeIndex = 0;
   
   final List<String> _availableCommands = [
-    'help',
-    'clear',
-    'ls',
-    'pwd',
-    'cd',
-    'cat',
-    'echo',
-    'date',
-    'whoami',
-    'uname',
-    'ps',
-    'kill',
-    'mkdir',
-    'rmdir',
-    'touch',
-    'rm',
-    'cp',
-    'mv',
-    'grep',
-    'find',
-    'chmod',
-    'chown',
-    'tar',
-    'zip',
-    'unzip',
-    'wget',
-    'curl',
-    'ping',
-    'ssh',
-    'scp',
-    'git',
-    'npm',
-    'node',
-    'python',
-    'pip',
-    'java',
-    'javac',
-    'gcc',
-    'make',
-    'docker',
-    'kubectl',
+    'help', 'clear', 'ls', 'pwd', 'cd', 'cat', 'echo', 'date', 'whoami', 'uname',
+    'ps', 'kill', 'mkdir', 'rmdir', 'touch', 'rm', 'cp', 'mv', 'grep', 'find',
+    'chmod', 'chown', 'tar', 'zip', 'unzip', 'wget', 'curl', 'ping', 'ssh',
+    'scp', 'git', 'npm', 'node', 'python', 'pip', 'java', 'javac', 'gcc',
+    'make', 'docker', 'kubectl',
   ];
 
   @override
@@ -479,4 +443,154 @@ drwxr-xr-x  3 user user  4096 ${DateTime.now().toString().substring(0, 16)} ..
                 ),
                 const SizedBox(height: 16),
                 TerminalText(
-                  text: '
+                  text: 'Panels can contain any widget and provide a terminal-style border.',
+                  theme: _currentTheme,
+                ),
+                const SizedBox(height: 16),
+                TerminalText(
+                  text: 'Features:',
+                  theme: _currentTheme,
+                  color: _currentTheme.warningColor,
+                ),
+                TerminalText(
+                  text: '• Customizable title bar',
+                  theme: _currentTheme,
+                ),
+                TerminalText(
+                  text: '• Theme-aware styling',
+                  theme: _currentTheme,
+                ),
+                TerminalText(
+                  text: '• Flexible content area',
+                  theme: _currentTheme,
+                ),
+                const Spacer(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      child: TerminalText(
+                        text: 'Close',
+                        theme: _currentTheme,
+                        color: _currentTheme.cursorColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  String _generateCowsay(String text) {
+    final lines = text.split('\n');
+    final maxLength = lines.fold(0, (max, line) => line.length > max ? line.length : max);
+    final topBorder = ' ' + '_' * (maxLength + 2);
+    final bottomBorder = ' ' + '-' * (maxLength + 2);
+    
+    String result = topBorder + '\n';
+    for (final line in lines) {
+      result += '< ${line.padRight(maxLength)} >\n';
+    }
+    result += bottomBorder + '\n';
+    result += '''
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||''';
+    
+    return result;
+  }
+
+  String _generateFiglet(String text) {
+    // Simple ASCII art generator
+    final Map<String, List<String>> chars = {
+      'A': ['  ██  ', ' ████ ', '██  ██', '██████', '██  ██'],
+      'B': ['██████', '██  ██', '██████', '██████', '██████'],
+      'C': [' █████', '██    ', '██    ', '██    ', ' █████'],
+      'D': ['██████', '██  ██', '██  ██', '██  ██', '██████'],
+      'E': ['██████', '██    ', '█████ ', '██    ', '██████'],
+      'F': ['██████', '██    ', '█████ ', '██    ', '██    '],
+      'G': [' █████', '██    ', '██ ███', '██  ██', ' █████'],
+      'H': ['██  ██', '██  ██', '██████', '██  ██', '██  ██'],
+      'I': ['██████', '  ██  ', '  ██  ', '  ██  ', '██████'],
+      'J': ['██████', '    ██', '    ██', '██  ██', ' █████'],
+      'K': ['██  ██', '██ ██ ', '████  ', '██ ██ ', '██  ██'],
+      'L': ['██    ', '██    ', '██    ', '██    ', '██████'],
+      'M': ['██████', '██████', '██  ██', '██  ██', '██  ██'],
+      'N': ['██  ██', '███ ██', '██████', '██ ███', '██  ██'],
+      'O': [' █████', '██  ██', '██  ██', '██  ██', ' █████'],
+      'P': ['██████', '██  ██', '██████', '██    ', '██    '],
+      'Q': [' █████', '██  ██', '██  ██', '██ ███', ' ██████'],
+      'R': ['██████', '██  ██', '██████', '██ ██ ', '██  ██'],
+      'S': [' █████', '██    ', ' █████', '    ██', '██████'],
+      'T': ['██████', '  ██  ', '  ██  ', '  ██  ', '  ██  '],
+      'U': ['██  ██', '██  ██', '██  ██', '██  ██', ' █████'],
+      'V': ['██  ██', '██  ██', '██  ██', ' ████ ', '  ██  '],
+      'W': ['██  ██', '██  ██', '██  ██', '██████', '██████'],
+      'X': ['██  ██', ' ████ ', '  ██  ', ' ████ ', '██  ██'],
+      'Y': ['██  ██', ' ████ ', '  ██  ', '  ██  ', '  ██  '],
+      'Z': ['██████', '   ██ ', '  ██  ', ' ██   ', '██████'],
+      ' ': ['      ', '      ', '      ', '      ', '      '],
+    };
+    
+    final lines = List.generate(5, (_) => '');
+    for (final char in text.toUpperCase().split('')) {
+      final charLines = chars[char] ?? chars[' ']!;
+      for (int i = 0; i < 5; i++) {
+        lines[i] += charLines[i];
+      }
+    }
+    
+    return lines.join('\n');
+  }
+
+  void _runMatrixEffect() {
+    final terminalState = _terminalKey.currentState;
+    if (terminalState == null) return;
+    
+    terminalState.addOutput('Entering the Matrix...', color: _currentTheme.successColor);
+    
+    // Simulate matrix effect with random characters
+    final chars = '0123456789ABCDEF';
+    for (int i = 0; i < 10; i++) {
+      String line = '';
+      for (int j = 0; j < 60; j++) {
+        line += chars[(DateTime.now().millisecondsSinceEpoch + i + j) % chars.length];
+      }
+      terminalState.addOutput(line, color: _currentTheme.successColor);
+    }
+    
+    terminalState.addOutput('Matrix effect complete.', color: _currentTheme.successColor);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Easy Terminal Demo'),
+        backgroundColor: _currentTheme.backgroundColor,
+        foregroundColor: _currentTheme.foregroundColor,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: TerminalView(
+          key: _terminalKey,
+          theme: _currentTheme,
+          onCommand: _handleCommand,
+          prompt: 'demo\$ ',
+          initialText: [
+            'Welcome to Easy Terminal Demo!',
+            'Type "help" to see available commands.',
+            '',
+          ],
+        ),
+      ),
+    );
+  }
+}

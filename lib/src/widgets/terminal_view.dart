@@ -39,10 +39,10 @@ class TerminalView extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<TerminalView> createState() => _TerminalViewState();
+  State<TerminalView> createState() => TerminalViewState();
 }
 
-class _TerminalViewState extends State<TerminalView>
+class TerminalViewState extends State<TerminalView>
     with TickerProviderStateMixin {
   late TerminalBuffer _buffer;
   late TerminalKeyboardHandler _keyboardHandler;
