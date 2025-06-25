@@ -1,7 +1,8 @@
 name: easy_terminal
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+repository: https://github.com/officiallyutso/easy_terminal
+
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

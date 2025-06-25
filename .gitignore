@@ -29,4 +29,11 @@ migrate_working_dir/
 .flutter-plugins
 .flutter-plugins-dependencies
 build/
-example/
+
+
+# Ignore everything in example/
+example/**
+
+# But keep example/lib/main.dart
+!example/lib/
+!example/lib/main.dart
