@@ -1,4 +1,4 @@
-# Easy Terminal
+# Easy Terminal Dart Package
 
 A fully customizable terminal-style UI toolkit for Flutter that brings the power and aesthetics of command-line interfaces to your mobile and desktop applications.
 
