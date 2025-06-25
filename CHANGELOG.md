@@ -1,3 +1,25 @@
+## [0.1.2] - 2025-06-25
+
+### Added
+- `TerminalText` now supports `isBold` and color overrides
+- `TerminalListSelector`: added callback for index on selection
+- `TerminalPanel`: supports variable width/height and nested widgets
+- New commands in example: `matrix`, `figlet`, `cowsay`, and `themes`
+- `ThemeManager`: dynamic theme switching from command-line
+- Custom ASCII renderer for simple figlet-style banners
+
+### Changed
+- Improved key handling in `TerminalInput` for smoother typing experience
+- Refactored `TerminalViewState` to expose a clean API for output and theme changes
+- Enhanced progress bar visuals and percentage formatting
+
+### Fixed
+- Terminal buffer scroll overflow issue
+- Theme reset bug when clearing screen
+- List selector edge case causing incorrect item selection on rapid input
+
+---
+
 ## [0.0.1] - 2025-06-25
 
 ### Added
