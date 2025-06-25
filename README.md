@@ -40,22 +40,22 @@ These screenshots demonstrate the practical implementation of the package featur
 <table>
 <tr>
 <td align="center">
-<img src="assets/1.png" alt="Main application interface" width="400"/>
+<img src="https://raw.githubusercontent.com/officiallyutso/easy_terminal/main/assets/1.png" alt="Main application interface" width="400"/>
 <br>
 <em>Main application interface showing the primary features and layout</em>
 </td>
 <td align="center">
-<img src="assets/2.png" alt="Feature demonstration screen" width="400"/>
+<img src="https://raw.githubusercontent.com/officiallyutso/easy_terminal/main/assets/2.png" alt="Feature demonstration screen" width="400"/>
 <br>
 <em>Demonstration of key package functionality in action</em>
 </td>
 <td align="center">
-<img src="assets/3.png" alt="Additional feature showcase" width="400"/>
+<img src="https://raw.githubusercontent.com/officiallyutso/easy_terminal/main/assets/3.png" alt="Additional feature showcase" width="400"/>
 <br>
 <em>Additional feature showcase highlighting package capabilities</em>
 </td>
   <td align="center">
-<img src="assets/4.png" alt="Configuration or settings interface" width="400"/>
+<img src="https://raw.githubusercontent.com/officiallyutso/easy_terminal/main/assets/4.png" alt="Configuration or settings interface" width="400"/>
 <br>
 <em>Configuration interface demonstrating package customization options</em>
 </td>
