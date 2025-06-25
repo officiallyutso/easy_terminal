@@ -1,3 +1,25 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.0] - 2025-06-25
+
+### Added
+- Initial release of Easy Terminal
+- TerminalView widget with full keyboard support
+- Multiple terminal themes (CRT Green, Amber, Hacker Dark)
+- Terminal components: panels, progress bars, list selectors, input prompts
+- Box drawing characters and monospaced font rendering
+- Command parsing and execution system
+- Screen buffer management
+- Comprehensive example application
+
+### Features
+- Full keyboard navigation
+- Customizable themes
+- Modular widget architecture
+- Developer-friendly API
+- Educational and gaming applications support
