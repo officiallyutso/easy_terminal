@@ -1,3 +1,10 @@
+## [0.1.4] - 2025-06-25
+
+### Added
+- Documentation with proper implementation examples
+---
+
+
 ## [0.1.3] - 2025-06-25
 
 ### Added
