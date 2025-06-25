@@ -1,3 +1,4 @@
+import 'package:easy_terminal/easy_terminal.dart';
 import 'package:flutter/material.dart';
 import '../models/terminal_theme.dart';
 
