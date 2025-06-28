@@ -34,6 +34,7 @@ These screenshots demonstrate the practical implementation of the package featur
 - **User Experience**: Clean, intuitive navigation and interaction patterns
 - **Feature Integration**: Seamless integration of package functionality within the demo app
 - **Customization**: Various configuration options available to developers
+- **Commands**: Configurable commands to perform any task is available
 
 ### Feature Demonstrations
 
